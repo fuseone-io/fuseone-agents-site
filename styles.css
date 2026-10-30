@@ -1,0 +1,62 @@
+/* FuseOne Agents — landing page.
+   Palette and type come from the product's own tokens
+   (fuseone-agents/web/src/styles/tokens): Fuse Aqua over cool slate,
+   Geist and Geist Mono self-hosted, so the page works air-gapped and
+   reports no view to a font CDN. */
+
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/geist-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("fonts/geist-mono-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: #0b1416;
+}
+
+a {
+  color: #56c7c8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8fdcdc;
+}
+
+a:focus-visible {
+  outline: 2px solid #22aeb3;
+  outline-offset: 2px;
+}
+
+.tech-hero {
+  background-image:
+    radial-gradient(640px 420px at 72% 36%, rgba(34, 174, 179, 0.1), transparent 70%),
+    linear-gradient(rgba(29, 42, 45, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 42, 45, 0.55) 1px, transparent 1px);
+  background-size: auto, 36px 36px, 36px 36px;
+}
+
+.card-glow {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 90px rgba(34, 174, 179, 0.12);
+}

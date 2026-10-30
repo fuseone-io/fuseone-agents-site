@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FuseOne Agents — AI agents with a paper trail</title>
+<meta name="description" content="FuseOne Agents is a governed, self-hosted AI-agent platform: every tool call clears a policy gate, every step seals into an append-only hash-chained ledger, and people approve what matters before it happens.">
+<meta property="og:title" content="FuseOne Agents — AI agents with a paper trail">
+<meta property="og:description" content="Governed, self-hosted AI agents: policy gate on every effect, hash-chained run ledger, approvals in Slack.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="width: 100%; background: #0b1416; color: #f1f5f5; font-family: 'Geist', system-ui, sans-serif; display: flex; flex-direction: column; align-items: stretch;">
+
+  <!-- ======================= NAV ======================= -->
+  <div style="border-bottom: 1px solid #1d2a2d; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 18px 32px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <img src="assets/logo-wordmark-dark.svg" alt="FuseOne Agents" style="height: 26px; width: auto;">
+      <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap; font-size: 14px; font-weight: 500;">
+        <a href="#agents" style="color: #b4c3c4;">Agents</a>
+        <a href="#governance" style="color: #b4c3c4;">Governance</a>
+        <a href="#flow" style="color: #b4c3c4;">How it runs</a>
+        <a href="#install" style="color: #b4c3c4;">Install</a>
+        <a href="https://github.com/fuseone-io/fuseone-agents" style="color: #f1f5f5; border: 1px solid #2f3d40; border-radius: 8px; padding: 8px 16px;">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= HERO ======================= -->
+  <div class="tech-hero" style="display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 88px 32px 72px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 56px; align-items: center;">
+
+      <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+        <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #56c7c8;">Self-hosted &middot; Governed &middot; Auditable</div>
+        <h1 style="margin: 0; font-size: 58px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; color: #ffffff;">AI agents with a <span style="color: #56c7c8;">paper trail</span>.</h1>
+        <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #b4c3c4; max-width: 520px;">FuseOne Agents runs autonomous agents inside your own environment. Every tool call clears a policy gate, every step seals into a hash-chained ledger, and a person approves what matters &mdash; before it happens, not after.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px;">
+          <a href="#install" style="background: #22aeb3; color: #0b1416; font-weight: 600; font-size: 15px; padding: 13px 24px; border-radius: 9px;">Install with Helm</a>
+          <a href="https://github.com/fuseone-io/fuseone-agents" style="color: #f1f5f5; font-weight: 500; font-size: 15px; padding: 13px 24px; border-radius: 9px; border: 1px solid #2f3d40;">View the source</a>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a9b9d;">
+          <span style="display: inline-flex; align-items: center; gap: 7px; border: 1px solid #1d2a2d; border-radius: 999px; padding: 6px 13px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #22aeb3; display: inline-block;"></span>v0.77.1</span>
+          <span style="border: 1px solid #1d2a2d; border-radius: 999px; padding: 6px 13px;">single Go binary</span>
+          <span style="border: 1px solid #1d2a2d; border-radius: 999px; padding: 6px 13px;">Postgres-backed</span>
+          <span style="border: 1px solid #1d2a2d; border-radius: 999px; padding: 6px 13px;">OIDC / SAML</span>
+        </div>
+      </div>
+
+      <!-- Run trail card: the product, truthfully -->
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+        <div class="card-glow" style="background: #131f21; border: 1px solid #1d2a2d; border-radius: 14px; overflow: hidden;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #1d2a2d;">
+            <span style="display: inline-flex; align-items: center; gap: 10px; min-width: 0;">
+              <span style="display: inline-flex; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 999px; background: #2f3d40; display: inline-block;"></span><span style="width: 9px; height: 9px; border-radius: 999px; background: #2f3d40; display: inline-block;"></span><span style="width: 9px; height: 9px; border-radius: 999px; background: #22aeb3; display: inline-block;"></span></span>
+              <span style="font-family: 'Geist Mono', monospace; font-size: 12.5px; color: #8a9b9d;">run_support_1793305671_182f902a</span>
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; color: #7ad6ac;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #1fa971; display: inline-block;"></span>Finished</span>
+          </div>
+          <div style="padding: 10px 18px 16px; display: flex; flex-direction: column; font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 1.5;">
+            <div style="display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px solid #16212398;">
+              <span style="color: #647476;">#01</span><span style="color: #8a9b9d; width: 104px; flex-shrink: 0;">planned</span><span style="color: #d3dede; min-width: 0;">check stalled cards on the SRE board</span>
+            </div>
+            <div style="display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px solid #16212398;">
+              <span style="color: #647476;">#02</span><span style="color: #8a9b9d; width: 104px; flex-shrink: 0;">gate</span><span style="min-width: 0; color: #d3dede;">jira.search &middot; read &middot; <span style="color: #56c7c8; font-weight: 600;">allowed</span></span>
+            </div>
+            <div style="display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px solid #16212398;">
+              <span style="color: #647476;">#03</span><span style="color: #8a9b9d; width: 104px; flex-shrink: 0;">tool_returned</span><span style="color: #d3dede; min-width: 0;">14 issues &middot; 8.2 KiB &middot; digest recorded</span>
+            </div>
+            <div style="display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px solid #16212398;">
+              <span style="color: #647476;">#04</span><span style="color: #8a9b9d; width: 104px; flex-shrink: 0;">gate</span><span style="min-width: 0; color: #d3dede;">slack.post &middot; write &middot; <span style="color: #f5b301; font-weight: 600;">needs approval</span></span>
+            </div>
+            <div style="display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px solid #16212398;">
+              <span style="color: #647476;">#05</span><span style="color: #8a9b9d; width: 104px; flex-shrink: 0;">approved</span><span style="color: #d3dede; min-width: 0;">released by the on-call, from Slack</span>
+            </div>
+            <div style="display: flex; gap: 12px; padding: 7px 0;">
+              <span style="color: #647476;">#06</span><span style="color: #8a9b9d; width: 104px; flex-shrink: 0;">run_finished</span><span style="color: #d3dede; min-width: 0;">cost $0.0088 &middot; chain sealed</span>
+            </div>
+          </div>
+        </div>
+        <div style="font-family: 'Geist Mono', monospace; font-size: 11.5px; color: #8a9b9d; text-align: center;">Append-only &middot; hash-chained &middot; one writer per run</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= AGENT SHOWCASE ======================= -->
+  <div id="agents" style="border-top: 1px solid #1d2a2d; background: #0d181a; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 88px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+        <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #56c7c8;">01 / The fleet</div>
+        <h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700; letter-spacing: -0.015em; color: #ffffff;">Agents that work your queues while you sleep.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #b4c3c4;">Start from a catalogue template or write your own spec. Each agent is versioned, budgeted, and runs in copilot until you trust it in autonomous.</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+        <div style="flex: 1 1 250px; min-width: 0; background: #131f21; border: 1px solid #1d2a2d; border-top: 2px solid #0a757f; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+            <span style="font-size: 16px; font-weight: 600; color: #f1f5f5;">Alert response</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: #8fb6f0;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #2c6fe8; display: inline-block;"></span>Running</span>
+          </div>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #b4c3c4;">Watches your alert stream, triages what fired, and posts a headline with the full diagnosis in its thread.</p>
+          <div style="margin-top: auto; display: flex; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: #8a9b9d; border-top: 1px solid #1d2a2d; padding-top: 12px;">
+            <span>cron hourly</span><span>$0.01 / run</span>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 250px; min-width: 0; background: #131f21; border: 1px solid #1d2a2d; border-top: 2px solid #0a757f; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+            <span style="font-size: 16px; font-weight: 600; color: #f1f5f5;">Ticket triage</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: #7ad6ac;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #1fa971; display: inline-block;"></span>Done</span>
+          </div>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #b4c3c4;">Reads what arrived in the queue, labels and routes it, and escalates only what a person must see.</p>
+          <div style="margin-top: auto; display: flex; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: #8a9b9d; border-top: 1px solid #1d2a2d; padding-top: 12px;">
+            <span>on webhook</span><span>$0.004 / run</span>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 250px; min-width: 0; background: #131f21; border: 1px solid #1d2a2d; border-top: 2px solid #0a757f; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+            <span style="font-size: 16px; font-weight: 600; color: #f1f5f5;">Reconciliation</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: #ffd34d;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #f5b301; display: inline-block;"></span>Waiting</span>
+          </div>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #b4c3c4;">Crosses two sources of truth nightly and reports every divergence with the evidence beside it.</p>
+          <div style="margin-top: auto; display: flex; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: #8a9b9d; border-top: 1px solid #1d2a2d; padding-top: 12px;">
+            <span>cron nightly</span><span>$0.02 / run</span>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 250px; min-width: 0; background: #131f21; border: 1px solid #1d2a2d; border-top: 2px solid #0a757f; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+            <span style="font-size: 16px; font-weight: 600; color: #f1f5f5;">Lead qualification</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: #8fb6f0;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #2c6fe8; display: inline-block;"></span>Running</span>
+          </div>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #b4c3c4;">Enriches each inbound lead, scores it against your criteria, and hands sales a ready brief.</p>
+          <div style="margin-top: auto; display: flex; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: #8a9b9d; border-top: 1px solid #1d2a2d; padding-top: 12px;">
+            <span>on event</span><span>$0.008 / run</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #8a9b9d;">
+        <span>Anyone on the team talks to an agent from Slack; the agent answers in a thread, never as noise in the channel.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= GOVERNANCE PILLARS ======================= -->
+  <div id="governance" style="border-top: 1px solid #1d2a2d; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 88px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+        <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #56c7c8;">02 / Governance</div>
+        <h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700; letter-spacing: -0.015em; color: #ffffff;">Not a feature. The architecture.</h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 300px; min-width: 0; border: 1px solid #1d2a2d; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 600; color: #56c7c8;">01 &mdash; THE GATE</div>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 600; color: #f1f5f5;">No effect bypasses it</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #b4c3c4;">Seven checks, four verdicts. Every tool call is allowed, blocked, or held for a person &mdash; by policy a Curator owns, never by the agent's author or the tool's server. There is no "just this once".</p>
+        </div>
+        <div style="flex: 1 1 300px; min-width: 0; border: 1px solid #1d2a2d; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 600; color: #56c7c8;">02 &mdash; THE LEDGER</div>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 600; color: #f1f5f5;">Append-only, hash-chained</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #b4c3c4;">No UPDATE, no DELETE &mdash; the database itself refuses. Corrections are new steps, so the trail your auditor reads is the one that actually happened, sealed step by step.</p>
+        </div>
+        <div style="flex: 1 1 300px; min-width: 0; border: 1px solid #1d2a2d; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 600; color: #56c7c8;">03 &mdash; APPROVALS</div>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 600; color: #f1f5f5;">Copilot before autonomous</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #b4c3c4;">An agent earns autonomy one approval at a time. The ask lands where your team lives, and a yes releases exactly one held effect, once &mdash; recorded with who said it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= FLOW ======================= -->
+  <div id="flow" style="border-top: 1px solid #1d2a2d; background: #0d181a; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 88px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+        <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #56c7c8;">03 / How it runs</div>
+        <h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700; letter-spacing: -0.015em; color: #ffffff;">From trigger to report, one sealed trail.</h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 230px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 24px; font-weight: 600; color: #22aeb3;">01</div>
+          <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #f1f5f5;">Trigger</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #b4c3c4;">Cron, webhook, or someone asking in a channel. Every run opens with an owner, a budget, and an idempotency key.</p>
+        </div>
+        <div style="flex: 1 1 230px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 24px; font-weight: 600; color: #22aeb3;">02</div>
+          <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #f1f5f5;">Engine</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #b4c3c4;">The loop folds the ledger to decide the next action. State is derived from the trail, never stored beside it.</p>
+        </div>
+        <div style="flex: 1 1 230px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 24px; font-weight: 600; color: #22aeb3;">03</div>
+          <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #f1f5f5;">Tools</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #b4c3c4;">MCP servers, classified centrally. A server may offer a tool; what it is allowed to do is the Curator's ruling.</p>
+        </div>
+        <div style="flex: 1 1 230px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'Geist Mono', monospace; font-size: 24px; font-weight: 600; color: #22aeb3;">04</div>
+          <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #f1f5f5;">Report</h3>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #b4c3c4;">A one-line headline in the channel, the full report in its thread &mdash; with cost and the sealed trail a click away.</p>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; border-top: 1px solid #1d2a2d; padding-top: 32px;">
+        <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 22px; font-weight: 600; color: #f1f5f5;">to the micro</span>
+          <span style="font-size: 13px; color: #8a9b9d;">cost accounted per run, per agent, per area</span>
+        </div>
+        <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 22px; font-weight: 600; color: #f1f5f5;">budget-capped</span>
+          <span style="font-size: 13px; color: #8a9b9d;">a run that would overspend stops instead</span>
+        </div>
+        <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 22px; font-weight: 600; color: #f1f5f5;">OIDC / SAML</span>
+          <span style="font-size: 13px; color: #8a9b9d;">your identity provider, your delegation rules</span>
+        </div>
+        <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 22px; font-weight: 600; color: #f1f5f5;">pt-BR + en-US</span>
+          <span style="font-size: 13px; color: #8a9b9d;">console and reports in your team's language</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= INSTALL ======================= -->
+  <div id="install" style="border-top: 1px solid #1d2a2d; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 88px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #56c7c8;">04 / Install</div>
+        <h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700; letter-spacing: -0.015em; color: #ffffff;">Runs where your data lives.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #b4c3c4;">One Go binary &mdash; serve, worker, migrate, verify &mdash; a Postgres you already run, and a Helm chart. No SaaS, no data leaving your network, no per-seat pricing surprise.</p>
+      </div>
+      <div class="card-glow" style="flex: 1 1 440px; min-width: 0; background: #070f10; border: 1px solid #1d2a2d; border-radius: 14px; box-sizing: border-box; overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-bottom: 1px solid #1d2a2d;">
+          <span style="display: inline-flex; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 999px; background: #2f3d40; display: inline-block;"></span><span style="width: 9px; height: 9px; border-radius: 999px; background: #2f3d40; display: inline-block;"></span><span style="width: 9px; height: 9px; border-radius: 999px; background: #22aeb3; display: inline-block;"></span></span>
+          <span style="font-family: 'Geist Mono', monospace; font-size: 11.5px; color: #647476;">fuseone &mdash; zsh</span>
+        </div>
+        <div style="padding: 20px 24px; overflow-x: auto;">
+          <pre style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 13.5px; line-height: 1.8; color: #d3dede;"><span style="color: #647476;"># clone, then install the chart</span>
+<span style="color: #56c7c8;">$</span> git clone https://github.com/fuseone-io/fuseone-agents
+<span style="color: #56c7c8;">$</span> helm install agents deploy/helm/fuseone-agents
+
+<span style="color: #647476;"># point it at your Postgres and your model provider,</span>
+<span style="color: #647476;"># connect Slack, and publish your first agent</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= FOOTER ======================= -->
+  <div style="border-top: 1px solid #1d2a2d; display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1120px; padding: 36px 32px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/logo-mark-dark.svg" alt="" style="height: 24px; width: auto;">
+        <span style="font-size: 13.5px; color: #8a9b9d;">FuseOne Agents &mdash; governed agents, installed in your environment.</span>
+      </div>
+      <div style="display: flex; gap: 24px; font-size: 13.5px;">
+        <a href="https://github.com/fuseone-io/fuseone-agents" style="color: #8a9b9d;">GitHub</a>
+        <a href="https://github.com/fuseone-io/fuseone-agents/blob/main/CHANGELOG.md" style="color: #8a9b9d;">Changelog</a>
+        <a href="https://github.com/fuseone-io/fuseone-agents/blob/main/docs/PRD-001-fuseone-agents.md" style="color: #8a9b9d;">PRD</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
