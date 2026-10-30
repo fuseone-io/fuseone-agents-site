@@ -38,5 +38,5 @@ npx wrangler pages deploy . --project-name fuseone-agents-site
 
 ## Updating the version chip
 
-The hero shows the current platform release (`v0.77.1`). Bump it in
+The hero shows the current platform release (`v0.78.0`). Bump it in
 `index.html` when a release is cut.
